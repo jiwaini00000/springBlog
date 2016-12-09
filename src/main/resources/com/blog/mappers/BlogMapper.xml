@@ -12,7 +12,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="replyHit" column="replyHit"/>
 		<result property="content" column="content"/>
 		<result property="keyWord" column="keyWord"/>
-		<!--<association property="blogType" column="typeid" select="com.blog.repository.BlogTypeRopository.findById"></association>-->
+		<association property="blogType" column="typeid" select="com.blog.repository.BlogTypeRopository.findById"/>
 	</resultMap>
 	<select id="list" parameterType="Map" resultMap="BlogResult">
 		select * from t_blog

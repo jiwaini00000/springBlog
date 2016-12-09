@@ -33,10 +33,9 @@ public class IndexController {
 	public String index(Model model){
 		Map<String, Object> map = new HashMap<String, Object>();
 		List<Blog> blogList = blogService.list(map);
-		for (Blog blog : blogList) {
-			System.out.println(blog.getTitle());
-		}
-		model.addAttribute("name", "sasdsa");
+		model.addAttribute("blogList", blogList);
+		model.addAttribute("pageTitle", "java Blog");
+		model.addAttribute("mainPage", "foreground/blog/list.jsp");
 		return "default";
 	}
 }

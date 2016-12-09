@@ -11,7 +11,7 @@ public class Blog {
 	private Integer clickHit; //点击量
 	private Integer replyHit; //回复数量
 	private String content;
-	//private BlogType blogType;
+	private BlogType blogType;
 	private String keyWord;
 	public long getId() {
 		return id;
@@ -55,14 +55,12 @@ public class Blog {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	/*
 	public BlogType getBlogType() {
 		return blogType;
 	}
 	public void setBlogType(BlogType blogType) {
 		this.blogType = blogType;
 	}
-	*/
 	public String getKeyWord() {
 		return keyWord;
 	}
