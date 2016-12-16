@@ -15,4 +15,10 @@ public interface BlogRopository {
 	 * 查询blog列表
 	 */
 	public List<Blog> list(Map<String, Object> map);
+	
+	/**
+	 * 按日期统计日志数量
+	 * @return
+	 */
+	public List<Blog> blogCountList();
 }

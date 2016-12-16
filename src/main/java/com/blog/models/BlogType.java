@@ -1,10 +1,13 @@
 package com.blog.models;
 
+import org.aspectj.apache.bcel.generic.ReturnaddressType;
+
 public class BlogType {
 	
 	private Integer id;
 	private String typeName;
 	private Integer orderNo;
+	private Integer blogCount;
 	public Integer getId() {
 		return id;
 	}
@@ -22,5 +25,16 @@ public class BlogType {
 	}
 	public void setOrderNo(Integer orderNo) {
 		this.orderNo = orderNo;
+	}
+	public Integer getBlogCount() {
+		return blogCount;
+	}
+	public void setBlogCount(Integer blogCount) {
+		this.blogCount = blogCount;
+	}
+	
+	@Override
+	public String toString(){
+		return this.getTypeName()+"=="+this.getBlogCount();
 	}
 }

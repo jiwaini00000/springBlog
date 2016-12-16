@@ -9,4 +9,7 @@
 	<select id="findById" parameterType="integer" resultMap="BlogTypeResult">
 		select * from t_blogtype where id=#{id}
 	</select>
+	<select id="countList" resultMap="BlogTypeResult">
+		select t.id,t.typeName, count(b.id) blogCount from t_blogtype t left join t_blog b on b.typeId=t.id group by t.typeName order by t.orderNo 
+	</select>
 </mapper>

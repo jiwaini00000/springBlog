@@ -13,6 +13,8 @@ public class Blog {
 	private String content;
 	private BlogType blogType;
 	private String keyWord;
+	private String releaseDateStr;
+	private Integer blogCount;
 	public long getId() {
 		return id;
 	}
@@ -67,5 +69,16 @@ public class Blog {
 	public void setKeyWord(String keyWord) {
 		this.keyWord = keyWord;
 	}
-	
+	public String getReleaseDateStr() {
+		return releaseDateStr;
+	}
+	public void setReleaseDateStr(String releaseDateStr) {
+		this.releaseDateStr = releaseDateStr;
+	}
+	public Integer getBlogCount() {
+		return blogCount;
+	}
+	public void setBlogCount(Integer blogCount) {
+		this.blogCount = blogCount;
+	}
 }

@@ -17,4 +17,8 @@ public class BlogService {
 	public List<Blog> list(Map<String, Object>map){
 		return blogRopository.list(map);
 	}
+	
+	public List<Blog>  blogCountList(){
+		return blogRopository.blogCountList();
+	}
 }

@@ -14,6 +14,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<result property="keyWord" column="keyWord"/>
 		<association property="blogType" column="typeid" select="com.blog.repository.BlogTypeRopository.findById"/>
 	</resultMap>
+	<select id="blogCountList" resultMap="BlogResult">
+		SELECT DATE_FORMAT(releaseDate,"%y-%m-%d") as releaseDateStr,COUNT(id) as blogCount FROM `t_blog` GROUP BY DATE_FORMAT(releaseDate,"%y-%m-%d") ORDER BY releaseDateStr DESC limit 8;
+	</select>
 	<select id="list" parameterType="Map" resultMap="BlogResult">
 		select * from t_blog
 	</select>

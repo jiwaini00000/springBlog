@@ -1,5 +1,7 @@
 package com.blog.repository;
 
+import java.util.List;
+
 import com.blog.models.BlogType;
 
 public interface BlogTypeRopository {
@@ -9,4 +11,10 @@ public interface BlogTypeRopository {
 	 * @return
 	 */
 	public BlogType findById(Integer id);
+	
+	/**
+	 * 查询所有分类信息
+	 * @return
+	 */
+	public List<BlogType> countList();
 }
